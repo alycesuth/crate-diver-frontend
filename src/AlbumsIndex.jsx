@@ -2,10 +2,6 @@ export function AlbumsIndex({ albums }) {
   return (
     <main className="bg-[#1c1c1e] text-gray-200 min-h-screen px-8 py-12">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl font-bold text-[#e63946] mb-8">
-          All Albums <span className="text-[#6e5a86]">({albums.length} total)</span>
-        </h1>
-
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {albums.map((album) => (
             <div
