@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function Header() {
   return (
     <header className="flex justify-between items-center px-8 py-4 bg-[#1c1c1e] shadow-md">
@@ -16,18 +18,18 @@ export function Header() {
 
       {/* Right: Auth & Actions */}
       <div className="flex items-center space-x-4 text-sm font-medium">
-        <a href="/signup" className="text-gray-300 hover:text-white transition-colors duration-200">
+        <Link to="/signup" className="text-gray-300 hover:text-white transition-colors duration-200">
           Sign Up
-        </a>
-        <a href="/login" className="text-gray-300 hover:text-white transition-colors duration-200">
+        </Link>
+        <Link to="/login" className="text-gray-300 hover:text-white transition-colors duration-200">
           Login
-        </a>
-        <a
-          href="/add-album"
+        </Link>
+        <Link
+          to="/albums/new"
           className="bg-[#e63946] text-white px-4 py-2 rounded-md hover:bg-[#c53030] transition-all duration-200"
         >
           + Add Album
-        </a>
+        </Link>
       </div>
     </header>
   );

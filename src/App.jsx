@@ -6,6 +6,9 @@ import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { AlbumsShowPage } from "./AlbumsShowPage";
+import { AlbumsNew } from "./AlbumsNew";
+import { SignupPage } from "./SignupPage";
+import { LoginPage } from "./LoginPage";
 
 axios.defaults.baseURL = "http://localhost:3000";
 axios.defaults.withCredentials = true;
@@ -28,6 +31,18 @@ const router = createBrowserRouter([
         path: "/albums/:id",
         element: <AlbumsShowPage />,
         loader: ({ params }) => axios.get(`/albums/${params.id}.json`).then((response) => response.data),
+      },
+      {
+        path: "/albums/new",
+        element: <AlbumsNew />,
+      },
+      {
+        path: "/signup",
+        element: <SignupPage />,
+      },
+      {
+        path: "/login",
+        element: <LoginPage />,
       },
     ],
   },
