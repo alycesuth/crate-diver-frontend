@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { LogoutLink } from "./LogoutLink";
 
 export function Header() {
   return (
@@ -24,6 +25,7 @@ export function Header() {
         <Link to="/login" className="text-gray-300 hover:text-white transition-colors duration-200">
           Login
         </Link>
+        <LogoutLink className="text-gray-300 hover:text-white transition-colors duration-200" />
         <Link
           to="/albums/new"
           className="bg-[#e63946] text-white px-4 py-2 rounded-md hover:bg-[#c53030] transition-all duration-200"

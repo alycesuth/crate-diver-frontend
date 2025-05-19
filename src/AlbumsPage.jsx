@@ -76,20 +76,11 @@ export function AlbumsPage() {
     });
   };
 
-  const handleCreate = (params, successCallback) => {
-    console.log("handleCreate");
-    axios.post("/albums.json", params).then((response) => {
-      setAlbums([...albums, response.data]);
-      successCallback();
-    });
-  };
-
   useEffect(handleIndex, []);
 
   return (
     <main>
       <AlbumsIndex albums={albums} />
-      <AlbumsNew onCreate={handleCreate} />
     </main>
   );
 }

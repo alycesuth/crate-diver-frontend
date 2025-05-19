@@ -6,7 +6,7 @@ import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import { AlbumsShowPage } from "./AlbumsShowPage";
-import { AlbumsNew } from "./AlbumsNew";
+import { AlbumsNewPage } from "./AlbumsNewPage";
 import { SignupPage } from "./SignupPage";
 import { LoginPage } from "./LoginPage";
 
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/albums/new",
-        element: <AlbumsNew />,
+        element: <AlbumsNewPage />,
       },
       {
         path: "/signup",
